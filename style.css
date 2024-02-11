@@ -72,7 +72,6 @@ li{
     font-size: 25px;
 }
 .nav-video{
-    background-color: green;
     position: absolute;
     overflow: hidden;
     width: 80%;
@@ -83,7 +82,8 @@ li{
 }
 .nav-video video{
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
 .page2{
@@ -182,26 +182,37 @@ li{
     justify-content: center;
 }
 .page4 .page4-wrapper{
-    margin-top: 1rem;
     height: 80%;
     width: 90%;
     display: flex;
 }
 .page4-wrapper a{
     text-decoration: none;
+    width: 30%;
+    margin: auto;
+    color: black;
 }
 .page4-wrapper a:hover  h5{
     text-decoration: underline;
 }
 .page4-content{
     width: 100%;
+    margin: auto;
     height: 100%;
 }
 .page4-content .page4-image{
     height: 100%;
-    width: 380px;
+}
+.page4-content .page4-video{
+    height: 90%;
+    width: 370px;
 }
 .page4-content .page4-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.page4-content .page4-video video{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -215,6 +226,62 @@ li{
 }
 .page4-heading p{
     width: 50%;
+    font-size: 14px;
     line-height: 1;
     text-transform: uppercase;
+}
+.page5{
+    width: 100vw;
+    height: 100vh;
+}
+.page5-heading{
+    padding: 5rem;
+}
+.page5-heading h1{
+    line-height: 1;
+    font-size: 3.4vw;
+}
+.scroller{
+    margin: auto;
+    position: relative;
+}
+.scroller .swiper-container{
+    position: absolute;
+    width:30%;
+    padding-left: 4rem;
+}
+.scroller .swiper-container .swiper-wrapper{
+    gap: 2rem;
+    width: 100%;
+}
+.swiper-slide{
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide h1 picture img{
+    height: 46px;
+    width: 75px;
+}
+.page5-content{
+    margin-top: 35px;
+    padding: .5rem;
+}
+.page5-content p{
+    line-height: 1.3;
+}
+.box{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    border-radius: 50%;
+    z-index: 999;
+}
+.box h4{
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.588);
 }
