@@ -202,15 +202,22 @@ li{
 }
 .page4-content .page4-image{
     height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 .page4-content .page4-video{
-    height: 90%;
-    width: 370px;
+    height: 100%;
+    width: 380px;
 }
 .page4-content .page4-image img{
     width: 100%;
     height: 100%;
+    transform: scale(1.08);
     object-fit: cover;
+    transition: all 0.2s ease;
+}
+.page4-content .page4-image:hover img{
+    transform: scale(1.04);
 }
 .page4-content .page4-video video{
     width: 100%;
@@ -241,15 +248,16 @@ li{
     line-height: 1;
     font-size: 3.4vw;
 }
-.scroller{
-    margin: auto;
-    position: relative;
+.scrollerBox{
+    width: 100%;
+    height: 500px;
 }
-.scroller .swiper-container{
-    position: absolute;
-    width:30%;
+.scrollerBox .swiper-container{
+    width: 30%;
+    height: 400px;
     padding-left: 4rem;
 }
+
 .scroller .swiper-container .swiper-wrapper{
     gap: 2rem;
     width: 100%;
@@ -270,8 +278,8 @@ li{
 .page5-content p{
     line-height: 1.3;
 }
-.box{
-    position: absolute;
+/* .box{
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -279,9 +287,165 @@ li{
     height: 100px;
     background-color: pink;
     border-radius: 50%;
-    z-index: 999;
+    transition: all 0.1s ease;
+    z-index: 9;
 }
 .box h4{
     font-weight: 300;
     color: rgba(0, 0, 0, 0.588);
+} */
+
+
+.page6{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page6-inner{
+    width: 95%;
+    height: 100%;
+    display: flex;
+}
+.page6-inner .page6-content{
+    width: 50%;
+    padding: 3rem;
+}
+.page6-content h1{
+    font-size: 6rem;
+    font-weight: bold;
+    line-height: 1;
+}
+.page6-content h4{
+    font-size: 20px;
+    font-weight: 300;
+}
+.page6-content h4 span{
+    font-weight: bold;
+}
+.page6-content button{
+    margin-top: 5px;
+    outline: none;
+    border-color: pink;
+    padding: 8px 30px;
+    background-color: transparent;
+    color: pink;
+    font-size: 12px;
+    border-radius: 15px;
+    border-width: .1px;
+}
+.page6-inner .page6-video{
+    width: 50%;
+    background-color: green;
+} 
+.page6-video-inner{
+    width: 100%;
+    height: 100%;
+}
+.page6-inner .page6-video .page6-video-inner video{
+    object-fit: cover;
+    width: 100%;
+}
+.page7{
+    height: 80vh;
+    width: 100vw;
+}
+
+.page8{
+    width: 100vw;
+    height: 100vh;
+}
+.page8 .f-news{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4.5rem;
+}
+.page8 .f-news h1{
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.864);
+}
+.page8 .f-news button{
+    padding: 7px 30px;
+    color: rgba(0, 0, 0, 0.903);
+    font-size: 12px;
+    border-radius: 20px;
+    border: 1px solid black;
+    outline: none;
+}
+.f-detail{
+    width: 100%;
+    padding: 1rem 4.5rem;
+}
+.f-detail ul li{
+    list-style: none;
+}
+.f-detail ul li a {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    gap: 1rem;
+    
+}
+.f-detail ul li a .page8-img-container{
+    width: 390px;
+    height: 290px;
+    overflow: hidden;
+}
+.f-detail ul li a .page8-img-container picture{
+    height: 100%;
+    width: 100%;
+}
+.f-detail ul li a .page8-img-container picture img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform:scale(1.3);
+}
+.page8-detail-content-container{
+    width: 70%;
+}
+.page8-detail-content-container .page8-detail-content{
+    display: flex;
+    justify-content: space-between;
+    height: 280px;
+}
+.page8-detail-content-container .page8-detail-content h1{
+    font-size: 3rem;
+    width: 70%;
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.figure-div{
+    height: 50px;
+    overflow: hidden;
+    width: 36px;
+    position: relative;
+}
+.page8-detail-content figure{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    transform: translateX(-48px);
+    display: flex;
+    transition: all 0.5s ease;
+}
+.f-detail ul li a:hover .page8-detail-content figure{
+    transform: translateX(0px);
+}
+.f-detail ul li a:hover .page8-img-container img{
+    transform: scale(1.25);
+    transition: all 0.5s ease;
+} 
+.f-detail ul li:hover{
+    text-decoration: underline;
+}
+
+.page8-detail-content figure i{
+    font-size: 3rem;
 }

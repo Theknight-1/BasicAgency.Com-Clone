@@ -49,7 +49,6 @@ gsap.to(".nav-video", {
 });
 
 
-
     var swiper = new Swiper('.swiper-container', {
         // Optional parameters
         direction: 'horizontal',
@@ -66,11 +65,41 @@ gsap.to(".nav-video", {
         },
     });
 
-  var scrollerBox = document.querySelector('.swiper-container')
-  var box = document.querySelector('.box')
-  scrollerBox.addEventListener("mousemove",function(dets){
-    box.style.left = dets.y +"px"
-    box.style.top = dets.x +"px"
-  })
-    
 
+    gsap.to("body", {
+      backgroundColor:"#000",
+      color:"pink",
+        scrollTrigger: {
+            trigger: ".page6",
+            scroller : "#main",
+            start: "top 90%", // Animation starts when the center of nav-video touches the top of the viewport
+            end: "bottom 90%", // Animation ends when the center of nav-video touches the bottom of the viewport
+            scrub: 0.01,
+            // markers: true // Optional: Add markers to visualize ScrollTrigger
+        }
+    });
+
+    gsap.to(".page6-content ", {
+        scrollTrigger: {
+            trigger: ".page6-content",
+            scroller : "#main",
+            pin : true,
+            start: "top top", // Animation starts when the center of nav-video touches the top of the viewport
+            end: "bottom 50%", // Animation ends when the center of nav-video touches the bottom of the viewport
+            scrub: 0.1,
+            // markers: true // Optional: Add markers to visualize ScrollTrigger
+          }
+      });
+      
+      gsap.to("body", {
+        backgroundColor:"#ffffff",
+        color:"#000",
+          scrollTrigger: {
+              trigger: ".page7",
+              scroller : "#main",
+              start: "top 20%", // Animation starts when the center of nav-video touches the top of the viewport
+            //   end: "bottom 10%", // Animation ends when the center of nav-video touches the bottom of the viewport
+              scrub: 1,
+              // markers: true // Optional: Add markers to visualize ScrollTrigger
+          }
+      });
