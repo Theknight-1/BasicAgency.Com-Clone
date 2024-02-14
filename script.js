@@ -97,8 +97,8 @@ gsap.to(".nav-video", {
           scrollTrigger: {
               trigger: ".page7",
               scroller : "#main",
-              start: "top 20%", // Animation starts when the center of nav-video touches the top of the viewport
-            //   end: "bottom 10%", // Animation ends when the center of nav-video touches the bottom of the viewport
+              start: "bottom 20%", // Animation starts when the center of nav-video touches the top of the viewport
+              end: "bottom 10%", // Animation ends when the center of nav-video touches the bottom of the viewport
               scrub: 1,
               // markers: true // Optional: Add markers to visualize ScrollTrigger
           }

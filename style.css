@@ -131,6 +131,12 @@ li{
     background-color: rgba(0, 0, 0, 0.76);
     margin: 2rem auto;
 }
+li .simple-line{
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.76);
+    margin: 2rem auto;
+}
 .page3{
     height: 100vh;
     max-width: 100vw;
@@ -158,13 +164,61 @@ li{
     margin-top: 30px;
     width: 30%;
 }
-.page3-left .heading .page3-button button{
-    width: 100%;
-    padding:8px;
-    border-radius: 20px;
-    border: 1px solid black;
-    outline: none;
+
+
+ button {
+    position: relative;
+    display: inline-flex;
+    overflow: hidden;
+    align-items: center;
+    padding: 0px 30px;
+    border: .1rem solid;
+    border-radius: 1.6rem;
+    color: currentcolor;
+    font-size: 0.9rem;
+    letter-spacing: -.02em;
+    line-height: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transform: translateZ(0);
+    white-space: nowrap;
 }
+/* .page3-left .heading .page3-button button::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(22, 22, 22);
+    width: 100%;
+    height: 0;
+    border-color:white;
+    transition: all 0.3s ease-out;
+    transform: translateY(0%);
+    z-index: 1;
+} */
+
+ button::before {
+    position: absolute;
+    z-index: -1;
+    bottom: 0rem;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: black;
+    color: white;
+    content: "";
+    transform: translateY(0,100%,0);
+    transition: all 0.2s ease-out;
+}
+
+
+ button:hover::before{
+    height: 100%;
+}
+.page3-left .heading .page3-button button:hover {
+    color: white; /* Change text color to white on hover */
+}
+
 .page3-right{
     width: 50%;
     padding: 1rem;
@@ -328,16 +382,15 @@ li{
     margin-top: 5px;
     outline: none;
     border-color: pink;
-    padding: 8px 30px;
+    padding: -10px 30px;
     background-color: transparent;
     color: pink;
-    font-size: 12px;
+    font-size: 10px;
     border-radius: 15px;
     border-width: .1px;
 }
 .page6-inner .page6-video{
     width: 50%;
-    background-color: green;
 } 
 .page6-video-inner{
     width: 100%;
@@ -350,11 +403,12 @@ li{
 .page7{
     height: 80vh;
     width: 100vw;
+    /* background-color: whitesmoke; */
 }
 
 .page8{
     width: 100vw;
-    height: 100vh;
+    background-color: whitesmoke;
 }
 .page8 .f-news{
     display: flex;
@@ -368,16 +422,12 @@ li{
     line-height: 1;
     color: rgba(0, 0, 0, 0.864);
 }
-.page8 .f-news button{
-    padding: 7px 30px;
-    color: rgba(0, 0, 0, 0.903);
-    font-size: 12px;
-    border-radius: 20px;
-    border: 1px solid black;
-    outline: none;
+.page8 .f-news button:hover{
+    color: white;
 }
 .f-detail{
     width: 100%;
+    margin-bottom: 1rem;
     padding: 1rem 4.5rem;
 }
 .f-detail ul li{
@@ -448,4 +498,108 @@ li{
 
 .page8-detail-content figure i{
     font-size: 3rem;
+}
+.page9{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.831);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page9-wrapper{
+    display: flex;
+    margin-top: 4rem;
+    height: 85%;
+    width: 90%;
+}
+.page9-wrapper .page9-email{
+    width: 50%;
+    height: 100%;
+}
+.page9-email svg{
+    padding-left: 2.3rem;
+    fill: white;
+    height: 30px;
+    width: 120px;
+}
+.page9-email .email-input{
+    height:400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.email-input .email-input-inner{
+    width: 100%;
+    padding: 40px;
+    color: white;
+}
+.email-input .email-input-inner ul{
+    padding-left: 1.3rem;
+    font-size: 25px;
+    word-spacing: 0%;
+}
+.email-input .email-input-inner ul li h1{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(245, 245, 245);
+}
+.email-input .email-input-inner input{
+    background-color: transparent;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid;
+    border-color: white;
+    width: 100%;
+    padding: 1rem 0rem;
+    margin: 0;
+}
+.email-input .email-input-inner input::placeholder{
+    font-size: 20px;
+    padding: 5px;
+    color: white;
+}
+.page9-list-deatail{
+    padding: 0rem 2rem;
+    width: 50%;
+    color: rgba(255, 255, 255, 0.948);
+}
+.page9-list-deatail h1{
+    font-weight: 500;
+    width: 90%;
+    font-size: 35px;
+    line-height: 1;
+}
+.page9-list-deatail h1 span{
+    text-decoration: underline;
+}
+.page9-li-list{
+    display: flex;
+    align-items: center;
+    height: 400px;
+}
+.page9-li-list ul{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+.page9-li-list ul li h1{
+    font-size: 20px;
+    font-weight: 500;
+}
+.page9-li-list ul li div{
+    display: block;
+    width: 200px;
+}
+.page9-li-list ul li div ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-top: 10px;
+}
+.page9-li-list ul li div ul li{
+    line-height: 1;
 }
